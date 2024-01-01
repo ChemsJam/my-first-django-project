@@ -16,9 +16,13 @@ def about(request):
 
 def projects(request):
     projects = list(Project.objects.values())
-    return render (request, 'projects.html')
+    return render (request, 'projects.html', {
+        'projects': projects
+    })
 
 
-def task(request, tittle):
-    task = Task.objects.get(tittle=tittle)
-    return render (request, 'task.html')
+def tasks(request):
+    tasks = Task.objects.all()
+    return render (request, 'task.html', {
+        'tasks': tasks
+    })
