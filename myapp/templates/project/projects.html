@@ -1,0 +1,16 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+
+<h1>Projectos</h1>
+
+{% for project in projects %}
+
+<h1>{{project.name}}</h1>
+<button>Delete</button>
+
+{% endfor %}
+
+<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores molestiae, ipsum aperiam error amet quis id aspernatur a saepe, veniam praesentium itaque officia reprehenderit explicabo sed nemo fugit animi fugiat.</h2>
+
+{% endblock %}
