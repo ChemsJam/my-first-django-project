@@ -4,18 +4,14 @@
 
 {% for project in projects %}
 
-<article>
+<div class="card">
   <a href="{% url 'project_detail' project.id %}">
     <h1>{{project.name}}</h1>
   </a>
-</article>
+</div>
 
 {% endfor %}
 
-<h2>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores molestiae,
-  ipsum aperiam error amet quis id aspernatur a saepe, veniam praesentium itaque
-  officia reprehenderit explicabo sed nemo fugit animi fugiat.
-</h2>
+
 
 {% endblock %}

@@ -6,7 +6,7 @@
 
 {% for task in tasks %}
 
-<div>
+<div class="card">
     <h1> {% if task.done == False %}☑{% else %}✅{% endif %}{{task.tittle}}</h1>    
     
     <p>{{task.description}}</p>
@@ -16,7 +16,5 @@
 </div>
 
 {% endfor %}
-
-<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque soluta voluptatibus error! Quia soluta expedita dolores labore, veritatis aperiam pariatur.</h2>
 
 {% endblock %}
