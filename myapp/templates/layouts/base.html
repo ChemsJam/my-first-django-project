@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django proyects</title>
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="{% url 'index' %}">Home</a>
+            </li>
+            <li>
+                <a href="{% url 'about' %}">About</a>
+            </li>
+            <li>
+                <a href="{% url 'projects' %}">Project</a>
+            </li>
+            <li>
+                <a href="{% url 'tasks' %}">task</a>
+            </li>
+            <li>
+                <a href="{% url 'create_task' %}">Create New Task</a>
+            </li>
+            <li>
+                <a href="{% url 'create_project' %}">Create New Project</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
